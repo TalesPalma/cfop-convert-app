@@ -1,0 +1,50 @@
+.container-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 500px;
+  margin: 200px auto;
+  padding: 50px;
+  border-radius: 20px;
+}
+
+.container-form .footer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-form .footer Button {
+  margin-top: 20px;
+  width: 100px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: #06b1db;
+}
+
+/* Para telas menores que 600px */
+@media (max-width: 600px) {
+  .container-form {
+    margin: 100px auto;
+    padding: 20px;
+  }
+}
+
+/* Para telas menores que 900px */
+@media (max-width: 900px) {
+  .container-form {
+    margin: 150px auto;
+    padding: 30px;
+  }
+}
+
+/* Para telas maiores que 900px */
+@media (min-width: 900px) {
+  .container-form {
+    margin: 200px auto;
+    padding: 50px;
+  }
+}

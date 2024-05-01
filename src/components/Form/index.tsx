@@ -3,7 +3,7 @@ import './Form.css'
 const Form = () => {
 
     return (
-        <div className='form'>
+        <div className='form-container'>
             <form>
                 <div className='input-container'>
                     <label >Entre com o cfop:</label>

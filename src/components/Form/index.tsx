@@ -1,47 +1,23 @@
-import { Autocomplete, Box, Button, TextField } from "@mui/material"
-import React, { useState } from "react"
 import './Form.css'
 
-
 const Form = () => {
-        const options = ["option1", "option2", "option3"];
 
-        const [teste,setTeste] = useState('Digite algo no campo Name')
-
-        return (
-            <div className="container-form">
-                <h1>{teste}</h1>
-                <Box component={"form"}
-                    sx={{
-                        '& .MuiTextField-root': { m: 1, width: '40ch' },
-                        display: 'flex',
-                        flexDirection: 'column',
-                    }}
-                >
-                    <div className="body">
-                        <TextField
-                            required
-                            id="filled-required"
-                            label="Name"
-                            placeholder="Your name"
-                            variant="filled"
-                            onChange={(e) => setTeste(e.target.value)}
-                        />
-                        <Autocomplete
-                            disablePortal
-                            id="combo-box-demo"
-                            options={options}
-                            sx={{ width: 300 }}
-                            renderInput={(params) => <TextField {...params} label="Teste autocomplete" />}
-                        />
-                    </div>
-                    <div className="footer">
-                        <Button variant="contained">Contained</Button>
-                    </div>
-                </Box>
-            </div>
-        )
-    }
-
+    return (
+        <div className='form'>
+            <form>
+                <div className='input-container'>
+                    <label >Entre com o cfop:</label>
+                    <input placeholder="Entre com o cfop" type="text" className="input" />
+                    <div className="underline"></div>
+                    <select>
+                        <option value="cfop 1">UTILIZADOS PARA USO E CONSUMO</option>
+                        <option value="cfop 2">UTILIZADOS PARA INDUSTRIALIZAÇÃO</option>
+                    </select>
+                </div>
+                <button type="submit">Converter</button>
+            </form>
+        </div>
+    )
+}
 
 export default Form

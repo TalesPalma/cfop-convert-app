@@ -1,47 +1,83 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
 # cfop-convert-app
+
+<!-- Create table -->
+
+
+
+## CFOP_CONVERTIDO
+| CFOP DE COMPRA | CFOP DE ENTRADA | --- 
+| :--- | :---: | ---: |
+| 5101 | 1101 |
+| 5102 | 1102 |
+| 5201 | 1201 |
+| 5202 | 1202 |
+| 5401 | 1401 |
+| 5403 | 1403 |
+| 5405 | 1403 |
+| 5411 | 1411 |
+| 5556 | 1556 |
+| 5557 | 1151 |
+| 5910 | 1910 |
+| 5911 | 1911 |
+| 5929 | 1102 |
+| 6101 | 2101 |
+| 6202 | 2102 |
+| 6108 | EXCLUIR |
+| 6201 | 2201 |
+| 6202 | 2202 |
+| 6401 | 2401 |
+| 6403 | 2403 |
+| 6404 | 2403 |
+| 6411 | 2411 |
+| 6556 | 2556 |
+| 6557 | 2556 |
+| 6603 | EXCLUIR |
+| 6911 | 2911 |
+| 6929 | 2102 |
+---
+
+## Tabela de CONVERSAO DE CFOP
+
+| 5101, 5102, 6101, 6102, 5910, 6910<br>5403, 5405, 5401, 6401, 6403, 5910, 6910     | 000, 020, 040, 041<br>060, 070, 010      | 1101 COMPRA PARA INDUSTRIZALIZACAO TRIBUTADA<br>1401 COMPRA PARA INDUSTRIALIZACAO COM ST  |
+| ---------------------------------------------------------------------------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------- |
+| 5101, 5102, 6101, 6102, 5910, 6910<br>5403, 5405, 5401, 6401, 6403, 5910, 6910<br> | 000, 020, 040, 041 <br>060, 070, 010<br> | 1102 COMPRA PARA COMERCIALIZACAO TRIBUTADA<br>1403 COMPRA PARA COMERCIALIZACAO COM ST<br> |
+| 5101, 5102, 6101, 6102, 5910, 6910<br>5403, 5405, 5401, 6401, 6403, 5910, 6910<br> | 000, 020, 040, 041 <br>060, 070, 010<br> | 1556 COMPRA PARA USO E CONSUMO TRIBUTADA<br>1407 COMPRA PARA USO E CONSUMO COM ST<br>     |
+
+
+---
+### PERGUNTAS A SEREM EXIBIDAS APÓS O USUÁRIO DIGITAR O CFOP
+
+#### 1° ESSES PRODUTOS DE ENTRADA SERÃO UTILIZADOS PARA USO E CONSUMO ?
+
+	IF TRUE and CFOP == 5401 or CFOP == 5403 or CFOP == 5405:
+		RETORNA O CFOP 1407
+
+	IF TRUE and CFOP == 6401 or CFOP == 6403 or CFOP == 6404:
+		RETORNA O CFOP 2407
+
+	IF TRUE and CFOP == 5101 or CFOP == 5102:
+		RETORNA O CFOP 1556
+
+	IF TRUE and CFOP == 6101 or CFOP == 6102:
+		RETORNA O CFOP 2556
+
+
+
+
+
+#### 2° ESSES PRODUTOS DE ENTRADA SERÃO UTILIZADOS PARA INDUSTRIALIZAÇÃO?
+
+	IF TRUE and CFOP == 5401 or CFOP == 5403 or CFOP == 5405:
+		RETORNA O CFOP 1401
+
+	IF TRUE and CFOP == 6401 or CFOP == 6403 or CFOP == 6404:
+		RETORNA O CFOP 2401
+
+	IF TRUE and CFOP == 5101 or CFOP == 5102:
+		RETORNA O CFOP 1101
+
+	IF TRUE and CFOP == 6101 or CFOP == 6102:
+		RETORNA O CFOP 2101
+
+
+

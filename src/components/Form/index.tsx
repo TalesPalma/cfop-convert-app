@@ -5,10 +5,10 @@ const Form = () => {
 
     const [cfopInput, setCfopInput] = useState('')
     const [selectInput, setSelectInput] = useState('')
-    let [cfop,setCfop] = useState(cfopInput)
+    let [cfop, setCfop] = useState(cfopInput)
 
     const onClick = () => {
-            switch (cfopInput) {
+        switch (cfopInput) {
             case "5401":
                 setCfop("CFOP 1407");
                 break;
@@ -27,20 +27,19 @@ const Form = () => {
             <form>
                 <h1>{cfop}</h1>
                 <div className='input-container'>
-                    <label >Entre com o cfop:</label>
-                    <input
-                        placeholder="Entre com o cfop"
-                        type="text" value={cfopInput}
-                        onChange={(e) => setCfopInput(e.target.value)}
-                        className="input"
-                    />
+                    <label >Selecione o cfop</label>
+                    <select>
+                        <option value="cfop 1">5401</option>
+                        <option value="cfop 2">6401</option>
+                    </select>
                     <div className="underline"></div>
                     <select>
                         <option value="cfop 1">UTILIZADOS PARA USO E CONSUMO</option>
                         <option value="cfop 2">UTILIZADOS PARA INDUSTRIALIZAÇÃO</option>
+                        <option value="cfop 2">UTILIZADOS PARA REVENDA</option>
                     </select>
                 </div>
-                <button type="button" onClick={onClick} >Converter</button>
+                <button type="button" onClick={onClick}>Converter</button>
             </form>
         </div>
     )

@@ -1,0 +1,33 @@
+.headers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 110px;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh; /* Use 100vh for full viewport height */
+    background-color: #57565685;
+}
+
+@media (max-width: 600px) {
+    .headers {
+        font-size: 30px; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 400px) {
+    .headers {
+        font-size: 20px; /* Further adjust font size for even smaller screens */
+    }
+}

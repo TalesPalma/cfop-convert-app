@@ -9,15 +9,12 @@ function App() {
 
   const [visible, setVisible] = useState(true);
 
-
   const changeVisibleForm = () => {
     setVisible(true);
   }
   const changeVisibleList = () => {
     setVisible(false);
   }
-
-  
 
   return (
     <div className="App">

@@ -20,7 +20,7 @@ function App() {
     <div className="App">
       <div className="headers">
         <Logo/>
-        <Menu changeList={changeVisibleList} onChangeForm={changeVisibleForm} />
+        <Menu changeList={changeVisibleList} onChangeForm={changeVisibleForm} isSelected={visible}/>
       </div>
       <div className="body">
         {visible ? <Form/> : <ListaCfops/>}

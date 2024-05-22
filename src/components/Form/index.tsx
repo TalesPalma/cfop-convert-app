@@ -22,9 +22,7 @@ const Form = () => {
                     <select value={cfopInput} onChange={(e) => setCfopInput(e.target.value)}>
                         {
                             cfop_compra.map(item => <option key={item.code} value={item.code}>{item.code}</option>)
-                        }
-                        <option value="5401">5401</option>
-                        <option value="6401">6401</option>
+                        }                      
                     </select>
                     <div className="underline"></div>
                     <select value={selectInput} onChange={(e) => setSelectInput(e.target.value)} >

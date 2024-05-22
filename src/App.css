@@ -4,7 +4,7 @@
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    height: 110px;
+    height: 20vh;
     color: #ffffff;
     font-size: 40px;
     font-weight: bold;
@@ -16,8 +16,9 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 100vh; /* Use 100vh for full viewport height */
+    height: 100%; /* Use 100vh for full viewport height */
     background-color: #57565685;
+    animation: backgroundAnimation 5s  infinite alternate-reverse;
 }
 
 @media (max-width: 600px) {
@@ -30,4 +31,11 @@
     .headers {
         font-size: 20px; /* Further adjust font size for even smaller screens */
     }
+}
+
+
+@keyframes backgroundAnimation {
+    from{background-color: #57565685}
+    to{background-color: #36353585}
+    
 }

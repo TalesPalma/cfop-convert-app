@@ -48,7 +48,7 @@ function getCfopDescription(type: string, code: string): string {
             cfopOutput = industrializacaoMap.get(code) || "CFOP INVALIDO";
             break;
         case "revenda":
-            cfopOutput = industrializacaoMap.get(code) || "CFOP INVALIDO";
+            cfopOutput = revendaMap.get(code) || "CFOP INVALIDO";
             break;
     }
 

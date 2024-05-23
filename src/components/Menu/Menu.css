@@ -28,7 +28,8 @@
     }
 
     .menu-container button {
-        width: 100%;
+        width: 80vw;
+        margin-left: 40px;
         height: auto;
         margin-bottom: 10px;
     }

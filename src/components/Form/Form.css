@@ -180,3 +180,40 @@ option{
     background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
     color: #fff;
   }
+
+
+  @media screen {
+    .form-container{
+      width: 100vw;
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    h1{
+      font-size: 30px;
+    }
+
+    p{
+      font-size: 15px;
+    }
+
+    form{
+      width: 400px;
+      height: 400px;
+    }
+
+    button{
+      width: 300px;
+    }
+
+    select{
+      width: 300px;
+    }
+
+    input{
+      width: 300px;
+    }
+
+  }

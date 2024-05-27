@@ -18,7 +18,7 @@ const Form = () => {
             <form>
                 <h1>{isShow && cfopOutput}</h1>
                 <div className='input-container'>
-                    <label >Selecione o cfop</label>
+                    <label >Selecione o CFOP</label>
                     <select value={cfopInput} onChange={(e) => setCfopInput(e.target.value)}>
                         {
                             cfop_compra.map(item => <option key={item.code} value={item.code}>{item.code}</option>)

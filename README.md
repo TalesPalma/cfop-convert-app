@@ -42,4 +42,4 @@ Os seguintes scripts estão disponíveis:
 - **test**: Executa os testes do projeto.
 - **eject**: Remove o single bundle de configuração.
 
-
+___

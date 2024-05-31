@@ -1,83 +1,45 @@
-# cfop-convert-app
+# CFOP Converter
 
-<!-- Create table -->
+## Configuração do ambiente de desenvolvimento
 
+Para começar, você precisa ter o [Node.js](https://nodejs.org) instalado em seu computador.
 
+### Instalando as dependências
 
-## CFOP_CONVERTIDO
-| CFOP DE COMPRA | CFOP DE ENTRADA | --- 
-| :--- | :---: | ---: |
-| 5101 | 1101 |
-| 5102 | 1102 |
-| 5201 | 1201 |
-| 5202 | 1202 |
-| 5401 | 1401 |
-| 5403 | 1403 |
-| 5405 | 1403 |
-| 5411 | 1411 |
-| 5556 | 1556 |
-| 5557 | 1151 |
-| 5910 | 1910 |
-| 5911 | 1911 |
-| 5929 | 1102 |
-| 6101 | 2101 |
-| 6202 | 2102 |
-| 6108 | EXCLUIR |
-| 6201 | 2201 |
-| 6202 | 2202 |
-| 6401 | 2401 |
-| 6403 | 2403 |
-| 6404 | 2403 |
-| 6411 | 2411 |
-| 6556 | 2556 |
-| 6557 | 2556 |
-| 6603 | EXCLUIR |
-| 6911 | 2911 |
-| 6929 | 2102 |
----
+Basta executar o comando `npm install` na raiz do projeto. Isso irá instalar todas as dependências necessárias para o projeto.
 
-## Tabela de CONVERSAO DE CFOP
+### Executando o aplicativo
 
-| 5101, 5102, 6101, 6102, 5910, 6910<br>5403, 5405, 5401, 6401, 6403, 5910, 6910     | 000, 020, 040, 041<br>060, 070, 010      | 1101 COMPRA PARA INDUSTRIZALIZACAO TRIBUTADA<br>1401 COMPRA PARA INDUSTRIALIZACAO COM ST  |
-| ---------------------------------------------------------------------------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------- |
-| 5101, 5102, 6101, 6102, 5910, 6910<br>5403, 5405, 5401, 6401, 6403, 5910, 6910<br> | 000, 020, 040, 041 <br>060, 070, 010<br> | 1102 COMPRA PARA COMERCIALIZACAO TRIBUTADA<br>1403 COMPRA PARA COMERCIALIZACAO COM ST<br> |
-| 5101, 5102, 6101, 6102, 5910, 6910<br>5403, 5405, 5401, 6401, 6403, 5910, 6910<br> | 000, 020, 040, 041 <br>060, 070, 010<br> | 1556 COMPRA PARA USO E CONSUMO TRIBUTADA<br>1407 COMPRA PARA USO E CONSUMO COM ST<br>     |
+Para executar o aplicativo, basta executar o comando `npm start` na raiz do projeto. Isso iniciará o aplicativo em `http://localhost:3000`.
 
+## IDEs de desenvolvimento
 
----
-### PERGUNTAS A SEREM EXIBIDAS APÓS O USUÁRIO DIGITAR O CFOP
+Além do [Visual Studio Code](https://code.visualstudio.com), recomendo o uso de outros IDEs como o [Sublime Text](https://www.sublimetext.com), [Atom](https://atom.io) e [Neovim](https://neovim.io).
 
-#### 1° ESSES PRODUTOS DE ENTRADA SERÃO UTILIZADOS PARA USO E CONSUMO ?
+## Dependências
 
-	IF TRUE and CFOP == 5401 or CFOP == 5403 or CFOP == 5405:
-		RETORNA O CFOP 1407
+As seguintes bibliotecas e ferramentas são necessárias para o projeto:
 
-	IF TRUE and CFOP == 6401 or CFOP == 6403 or CFOP == 6404:
-		RETORNA O CFOP 2407
+- **@testing-library/jest-dom**: ^5.17.0
+- **@testing-library/react**: ^13.4.0
+- **@testing-library/user-event**: ^13.5.0
+- **@types/jest**: ^27.5.2
+- **@types/node**: ^16.18.96
+- **@types/react**: ^18.2.79
+- **@types/react-dom**: ^18.2.25
+- **react**: ^18.2.0
+- **react-dom**: ^18.2.0
+- **react-scripts**: 5.0.1
+- **typescript**: ^4.9.5
+- **web-vitals**: ^2.1.4
 
-	IF TRUE and CFOP == 5101 or CFOP == 5102:
-		RETORNA O CFOP 1556
+## Scripts
 
-	IF TRUE and CFOP == 6101 or CFOP == 6102:
-		RETORNA O CFOP 2556
+Os seguintes scripts estão disponíveis:
 
-
-
-
-
-#### 2° ESSES PRODUTOS DE ENTRADA SERÃO UTILIZADOS PARA INDUSTRIALIZAÇÃO?
-
-	IF TRUE and CFOP == 5401 or CFOP == 5403 or CFOP == 5405:
-		RETORNA O CFOP 1401
-
-	IF TRUE and CFOP == 6401 or CFOP == 6403 or CFOP == 6404:
-		RETORNA O CFOP 2401
-
-	IF TRUE and CFOP == 5101 or CFOP == 5102:
-		RETORNA O CFOP 1101
-
-	IF TRUE and CFOP == 6101 or CFOP == 6102:
-		RETORNA O CFOP 2101
-
+- **start**: Inicia o aplicativo em modo de desenvolvimento.
+- **build**: Constroi o aplicativo para produção na pasta `build`.
+- **test**: Executa os testes do projeto.
+- **eject**: Remove o single bundle de configuração.
 
 

@@ -2,7 +2,7 @@
 
 ## Configuração do ambiente de desenvolvimento
 
-Para começar, você precisa ter o [Node.js](https://nodejs.org) instalado em seu computador.
+Para começar, você precisa ter o [Node.js](https://nodejs.org) instalado em seu computador.E deve ter o [npm](https://www.npmjs.com/) instalado também.
 
 ### Instalando as dependências
 

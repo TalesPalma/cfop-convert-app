@@ -3,7 +3,7 @@ import Logo from "./components/Logo";
 import Menu from "./components/Menu";
 import './App.css';
 import { useState } from "react";
-import ListaCfops from "./components/ListaCfops";
+import { SendEmail } from "./components/sendEmail";
 
 function App() {
 
@@ -19,11 +19,11 @@ function App() {
   return (
     <div className="App">
       <div className="headers">
-        <Logo/>
-        <Menu changeList={changeVisibleList} onChangeForm={changeVisibleForm} isSelected={visible}/>
+        <Logo />
+        <Menu changeList={changeVisibleList} onChangeForm={changeVisibleForm} isSelected={visible} />
       </div>
       <div className="body">
-        {visible ? <Form/> : <ListaCfops/>}
+        {visible ? <Form /> : <SendEmail />}
       </div>
     </div>
   );

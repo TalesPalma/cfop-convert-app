@@ -14,7 +14,7 @@ const Menu = (props: { changeList: () => void, onChangeForm: () => void, isSelec
                 backgroundColor: !props.isSelected ? '#4158D0' : '#fff',
                 backgroundImage: !props.isSelected ? 'linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%)' : 'none'
             }}>
-                Lista cfops quê trabalhamos
+                Contato
             </button>
         </div>
     );
